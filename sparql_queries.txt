@@ -1,0 +1,91 @@
+1. Retrieve All Music Tracks
+PREFIX hiphop: <https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#>
+PREFIX schema: <http://schema.org/>
+SELECT ?track ?title ?artist ?duration ?isrc
+WHERE {
+  ?track a schema:MusicRecording ;
+         schema:name ?title ;
+         schema:byArtist ?artistUri ;
+         schema:duration ?duration ;
+         hiphop:isrcCode ?isrc .
+  ?artistUri schema:name ?artist .
+}
+
+2. Retrieve All Albums by a Specific Artist
+PREFIX hiphop: <https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#>
+PREFIX schema: <http://schema.org/>
+SELECT ?album ?title ?releaseDate ?numTracks
+WHERE {
+  ?album a schema:MusicAlbum ;
+         schema:name ?title ;
+         schema:byArtist/schema:name "Artist 1" ;
+         schema:datePublished ?releaseDate ;
+         schema:numTracks ?numTracks .
+}
+
+3. Retrieve All Performances at a Specific Location
+PREFIX hiphop: <https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#>
+PREFIX schema: <http://schema.org/>
+SELECT ?performance ?name ?date ?artist
+WHERE {
+  ?performance a schema:Event ;
+               schema:name ?name ;
+               schema:startDate ?date ;
+               schema:location/schema:name "Venue 1" ;
+               schema:performer/schema:name ?artist .
+}
+
+4. Retrieve All Tracks in a Playlist
+PREFIX hiphop: <https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#>
+PREFIX schema: <http://schema.org/>
+SELECT ?playlist ?name ?track ?trackName ?artist
+WHERE {
+  ?playlist a schema:MusicPlaylist ;
+            schema:name ?name ;
+            schema:track ?track .
+  ?track schema:name ?trackName ;
+         schema:byArtist/schema:name ?artist .
+}
+
+5. Retrieve All Compositions by a Specific Composer
+PREFIX hiphop: <https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#>
+PREFIX schema: <http://schema.org/>
+SELECT ?composition ?name ?lyricist ?iswc
+WHERE {
+  ?composition a schema:MusicComposition ;
+               schema:name ?name ;
+               schema:composer/schema:name "Composer 1" ;
+               schema:lyricist/schema:name ?lyricist ;
+               schema:iswcCode ?iswc .
+}
+
+
+-----------------------------------------------
+# Query to retrieve all music tracks using HipHop ontology
+PREFIX hiphop: <https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#>
+PREFIX schema: <http://schema.org/>
+SELECT ?track ?title ?artist ?duration ?isrc
+WHERE {
+  ?track a schema:MusicRecording ;
+         schema:name ?title ;
+         schema:byArtist ?artistUri ;
+         schema:duration ?duration ;
+         hiphop:isrcCode ?isrc .
+  ?artistUri schema:name ?artist .
+}
+
+# Description: This query retrieves all music tracks along with their title, artist, duration, and ISRC code using the HipHop ontology.
+
+# Query to retrieve all albums by a specific artist
+PREFIX hiphop: <https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#>
+PREFIX schema: <http://schema.org/>
+SELECT ?album ?title ?releaseDate ?numTracks
+WHERE {
+  ?album a schema:MusicAlbum ;
+         schema:name ?title ;
+         schema:byArtist/schema:name "Artist 1" ;
+         schema:datePublished ?releaseDate ;
+         schema:numTracks ?numTracks .
+}
+
+# Description: This query retrieves all albums by "Artist 1" including the album title, release date, and number of tracks.

@@ -1,0 +1,357 @@
+<html lang="en">
+  <head>
+    <script type="module">
+      import RefreshRuntime from "/@react-refresh";
+      RefreshRuntime.injectIntoGlobalHook(window);
+      window.$RefreshReg$ = () => {};
+      window.$RefreshSig$ = () => (type) => type;
+      window.__vite_plugin_react_preamble_installed__ = true;
+    </script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "ex": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:WebPage",
+        "schema:name": "Your Website Title",
+        "schema:description": "A brief description of your website.",
+        "ex:customProperty": "Your custom ontology data"
+      }
+    </script>
+    <style
+      type="text/css"
+      data-vite-dev-id="C:/Users/Mummy/Desktop/DS/client/src/App.css"
+    ></style>
+    <style
+      type="text/css"
+      data-vite-dev-id="C:/Users/Mummy/Desktop/DS/client/src/index.css"
+    >
+      :root {
+        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+        line-height: 1.5;
+        font-weight: 400;
+
+        color-scheme: light dark;
+        color: rgba(255, 255, 255, 0.87);
+        background-color: #242424;
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      a {
+        font-weight: 500;
+        color: #646cff;
+        text-decoration: inherit;
+      }
+      a:hover {
+        color: #535bf2;
+      }
+
+      body {
+        margin: 0;
+        display: flex;
+        place-items: center;
+        min-width: 320px;
+        min-height: 100vh;
+      }
+
+      h1 {
+        font-size: 3.2em;
+        line-height: 1.1;
+      }
+
+      button {
+        border-radius: 8px;
+        border: 1px solid transparent;
+        padding: 0.6em 1.2em;
+        font-size: 1em;
+        font-weight: 500;
+        font-family: inherit;
+        background-color: #1a1a1a;
+        cursor: pointer;
+        transition: border-color 0.25s;
+      }
+      button:hover {
+        border-color: #646cff;
+      }
+      button:focus,
+      button:focus-visible {
+        outline: 4px auto -webkit-focus-ring-color;
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          color: #213547;
+          background-color: #ffffff;
+        }
+        a:hover {
+          color: #747bff;
+        }
+        button {
+          background-color: #f9f9f9;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:MusicRecording",
+        "schema:name": "Track 1",
+        "schema:duration": "PT3M30S",
+        "schema:byArtist": {
+          "@type": "schema:MusicGroup",
+          "schema:name": "Artist 1"
+        },
+        "schema:isrcCode": "ISRC001"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:MusicAlbum",
+        "schema:name": "Album 1",
+        "schema:byArtist": {
+          "@type": "schema:MusicGroup",
+          "schema:name": "Artist 1"
+        },
+        "schema:datePublished": "2023-01-01",
+        "schema:numTracks": 10
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:Event",
+        "schema:name": "Performance 1",
+        "schema:startDate": "2023-06-01",
+        "schema:location": {
+          "@type": "schema:Place",
+          "schema:name": "Venue 1"
+        },
+        "schema:performer": {
+          "@type": "schema:MusicGroup",
+          "schema:name": "Artist 1"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:MusicRelease",
+        "schema:name": "Release 1",
+        "schema:datePublished": "2023-01-01",
+        "schema:recordLabel": {
+          "@type": "schema:Organization",
+          "schema:name": "Label 1"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:Organization",
+        "schema:name": "Label 1",
+        "schema:url": "http://label1.com"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:MusicComposition",
+        "schema:name": "Composition 1",
+        "schema:composer": {
+          "@type": "schema:MusicGroup",
+          "schema:name": "Composer 1"
+        },
+        "schema:lyricist": {
+          "@type": "schema:MusicGroup",
+          "schema:name": "Lyricist 1"
+        },
+        "schema:iswcCode": "ISWC001"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:Organization",
+        "schema:name": "Organization 1",
+        "schema:address": "123 Street",
+        "schema:founder": {
+          "@type": "schema:Person",
+          "schema:name": "Founder 1"
+        },
+        "schema:foundingDate": "2000-01-01"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:Event",
+        "schema:name": "Event 1",
+        "schema:startDate": "2023-01-01",
+        "schema:endDate": "2023-01-02",
+        "schema:location": {
+          "@type": "schema:Place",
+          "schema:name": "Location 1"
+        },
+        "schema:organizer": {
+          "@type": "schema:Organization",
+          "schema:name": "Organizer 1"
+        },
+        "schema:performer": {
+          "@type": "schema:Person",
+          "schema:name": "Performer 1"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:MusicGroup",
+        "schema:name": "Artist 1",
+        "schema:description": "A brief bio",
+        "schema:url": "http://artist1.com"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": {
+          "@vocab": "http://example.com/ontology#",
+          "schema": "http://schema.org/"
+        },
+        "@type": "schema:MusicPlaylist",
+        "schema:name": "Playlist 1",
+        "schema:numTracks": 2,
+        "schema:track": [
+          {
+            "@type": "schema:MusicRecording",
+            "schema:name": "Track 1",
+            "schema:byArtist": {
+              "@type": "schema:MusicGroup",
+              "schema:name": "Artist 1"
+            }
+          },
+          {
+            "@type": "schema:MusicRecording",
+            "schema:name": "Track 2",
+            "schema:byArtist": {
+              "@type": "schema:MusicGroup",
+              "schema:name": "Artist 2"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="App">
+        <header class="App-header">
+          <h1>Welcome to Your Music Website</h1>
+          <p>This is a sample web page.</p>
+        </header>
+        <div class="Content">
+          <div class="MusicTrack">
+            <h2>Track 1</h2>
+            <p>Artist: Artist 1</p>
+            <p>Duration: PT3M30S</p>
+            <p>ISRC: ISRC001</p>
+          </div>
+          <div class="Album">
+            <h2>Album 1</h2>
+            <p>Artist: Artist 1</p>
+            <p>Release Date: 2023-01-01</p>
+            <p>Number of Tracks: 10</p>
+          </div>
+          <div class="Artist">
+            <h2>Artist 1</h2>
+            <p>Bio: A brief bio</p>
+            <p>Homepage: <a href="http://artist1.com">http://artist1.com</a></p>
+          </div>
+          <div class="Performance">
+            <h2>Performance 1</h2>
+            <p>Artist: Artist 1</p>
+            <p>Date: 2023-06-01</p>
+            <p>Location: Venue 1</p>
+          </div>
+          <div class="Release">
+            <h2>Release 1</h2>
+            <p>Release Date: 2023-01-01</p>
+            <p>Label: Label 1</p>
+          </div>
+          <div class="Label">
+            <h2>Label 1</h2>
+            <p>Homepage: <a href="http://label1.com">http://label1.com</a></p>
+          </div>
+          <div class="Playlist">
+            <h2>Playlist 1</h2>
+            <p>Number of Tracks: 2</p>
+            <div>
+              <div><p>Track 1 by Artist 1</p></div>
+              <div><p>Track 2 by Artist 2</p></div>
+            </div>
+          </div>
+          <div class="Composition">
+            <h2>Composition 1</h2>
+            <p>Composer: Composer 1</p>
+            <p>Lyricist: Lyricist 1</p>
+            <p>ISWC: ISWC001</p>
+          </div>
+          <div class="Organization">
+            <h2>Organization 1</h2>
+            <p>Founder: Founder 1</p>
+            <p>Founding Date: 2000-01-01</p>
+            <p>Address: 123 Street</p>
+          </div>
+          <div class="Event">
+            <h2>Event 1</h2>
+            <p>Start Date: 2023-01-01</p>
+            <p>End Date: 2023-01-02</p>
+            <p>Location: Location 1</p>
+            <p>Organizer: Organizer 1</p>
+            <p>Performer: Performer 1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.jsx?t=1717841728420"></script>
+  </body>
+</html>
