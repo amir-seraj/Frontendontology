@@ -4,7 +4,7 @@ const Event = ({ event }) => {
   const jsonData = {
     "@context": {
       schema: "http://schema.org/",
-      hiphop: "https://your-username.github.io/HipHopOntology/hiphop.jsonld#",
+      hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
     "@type": "schema:Event",
     "schema:name": event.name,
