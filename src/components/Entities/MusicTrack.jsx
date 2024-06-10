@@ -1,9 +1,9 @@
+import React from "react";
 import JsonLd from "../JsonLd";
 
 const MusicTrack = ({ track }) => {
   const jsonData = {
     "@context": {
-      schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
     "@type": "hiphop:Track",
@@ -26,4 +26,5 @@ const MusicTrack = ({ track }) => {
     </div>
   );
 };
+
 export default MusicTrack;

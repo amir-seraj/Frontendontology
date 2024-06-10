@@ -14,58 +14,74 @@ import "./App.css";
 const App = () => {
   const tracks = [
     {
-      title: "Track 1",
-      duration: "PT3M30S",
-      artist: "Artist 1",
-      isrc: "ISRC001",
+      title: "Lose Yourself",
+      duration: "PT5M26S",
+      artist: "Eminem",
+      isrc: "USUM70200763",
     },
     {
-      title: "Track 2",
-      duration: "PT4M15S",
-      artist: "Artist 2",
-      isrc: "ISRC002",
+      title: "N.Y. State of Mind",
+      duration: "PT4M54S",
+      artist: "Nas",
+      isrc: "USSM19904782",
     },
   ];
 
   const album = {
-    name: "Album 1",
-    artist: "Artist 1",
-    releaseDate: "2023-01-01",
-    numTracks: 10,
+    name: "The Eminem Show",
+    artist: "Eminem",
+    releaseDate: "2002-05-26",
+    numTracks: 20,
   };
+
   const artist = {
-    name: "Artist 1",
-    bio: "A brief bio",
-    homepage: "http://artist1.com",
+    name: "Eminem",
+    bio: "Eminem, is an American rapper, songwriter, and record producer.",
+    homepage: "http://eminem.com",
   };
+
   const performance = {
-    name: "Performance 1",
-    date: "2023-06-01",
-    location: "Venue 1",
-    artist: "Artist 1",
+    name: "Eminem Live at Coachella",
+    date: "2023-04-15",
+    location: "Coachella Valley Music and Arts Festival",
+    artist: "Eminem",
   };
-  const release = { title: "Release 1", date: "2023-01-01", label: "Label 1" };
-  const label = { name: "Label 1", homepage: "http://label1.com" };
-  const playlist = { name: "Playlist 1", numTracks: 2, tracks };
+
+  const release = {
+    title: "Slim Shady LP",
+    releaseDate: "1999-02-23",
+    releaseType: "Album",
+  };
+
+  const label = {
+    name: "Shady Records",
+    foundingDate: "1999-01-01",
+    affiliatedTo: "Interscope Records",
+  };
+
+  const playlist = {
+    name: "Hip Hop Essentials",
+    datePublished: "2023-06-01",
+    numTracks: 2,
+    tracks: tracks,
+  };
+
   const composition = {
-    name: "Composition 1",
-    composer: "Composer 1",
-    lyricist: "Lyricist 1",
-    iswc: "ISWC001",
+    name: "Stan",
+    composer: "Eminem",
+    iswc: "T-072246387-3",
   };
+
   const organization = {
-    name: "Organization 1",
-    address: "123 Street",
-    founder: "Founder 1",
-    foundingDate: "2000-01-01",
+    name: "Aftermath Entertainment",
+    foundingDate: "1996-03-22",
+    numberOfEmployees: 50,
   };
+
   const event = {
-    name: "Event 1",
-    startDate: "2023-01-01",
-    endDate: "2023-01-02",
-    location: "Location 1",
-    organizer: "Organizer 1",
-    performer: "Performer 1",
+    name: "Rolling Loud Festival",
+    date: "2023-07-23",
+    location: "Miami, FL",
   };
 
   return (

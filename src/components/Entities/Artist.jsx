@@ -1,9 +1,9 @@
+import React from "react";
 import JsonLd from "../JsonLd";
 
 const Artist = ({ artist }) => {
   const jsonData = {
     "@context": {
-      schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
     "@type": "hiphop:Artist",

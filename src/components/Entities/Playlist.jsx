@@ -1,9 +1,9 @@
+import React from "react";
 import JsonLd from "../JsonLd";
 
 const Playlist = ({ playlist }) => {
   const jsonData = {
     "@context": {
-      schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
     "@type": "hiphop:Playlist",
@@ -12,7 +12,7 @@ const Playlist = ({ playlist }) => {
     "hiphop:num_tracks": playlist.numTracks,
     "hiphop:main_entity": playlist.tracks.map((track) => ({
       "@type": "hiphop:Track",
-      "hiphop:name": track.name,
+      "hiphop:name": track.title,
       "hiphop:artist": {
         "@type": "hiphop:Artist",
         "hiphop:name": track.artist,
@@ -29,7 +29,7 @@ const Playlist = ({ playlist }) => {
       <ul>
         {playlist.tracks.map((track, index) => (
           <li key={index}>
-            {track.name} by {track.artist}
+            {track.title} by {track.artist}
           </li>
         ))}
       </ul>
