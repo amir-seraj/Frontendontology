@@ -6,21 +6,18 @@ const Release = ({ release }) => {
       schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
-    "@type": "schema:MusicRelease",
-    "schema:name": release.title,
-    "schema:datePublished": release.date,
-    "schema:recordLabel": {
-      "@type": "schema:Organization",
-      "schema:name": release.label,
-    },
+    "@type": "hiphop:Release",
+    "hiphop:title": release.title,
+    "hiphop:release_date": release.releaseDate,
+    "hiphop:release_type": release.releaseType,
   };
 
   return (
     <div className="Release">
       <JsonLd data={jsonData} />
       <h2>{release.title}</h2>
-      <p>Release Date: {release.date}</p>
-      <p>Label: {release.label}</p>
+      <p>Release Date: {release.releaseDate}</p>
+      <p>Release Type: {release.releaseType}</p>
     </div>
   );
 };

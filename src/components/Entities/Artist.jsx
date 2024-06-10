@@ -6,10 +6,10 @@ const Artist = ({ artist }) => {
       schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
-    "@type": "schema:MusicGroup",
-    "schema:name": artist.name,
-    "schema:description": artist.bio,
-    "schema:url": artist.homepage,
+    "@type": "hiphop:Artist",
+    "hiphop:name": artist.name,
+    "hiphop:bio": artist.bio,
+    "hiphop:home_page": artist.homepage,
   };
 
   return (

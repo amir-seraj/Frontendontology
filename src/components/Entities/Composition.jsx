@@ -6,17 +6,13 @@ const Composition = ({ composition }) => {
       schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
-    "@type": "schema:MusicComposition",
-    "schema:name": composition.name,
-    "schema:composer": {
-      "@type": "schema:Person",
-      "schema:name": composition.composer,
+    "@type": "hiphop:Composition",
+    "hiphop:name": composition.name,
+    "hiphop:composer": {
+      "@type": "hiphop:Artist",
+      "hiphop:name": composition.composer,
     },
-    "schema:lyricist": {
-      "@type": "schema:Person",
-      "schema:name": composition.lyricist,
-    },
-    "schema:iswcCode": composition.iswc,
+    "hiphop:ISWC": composition.iswc,
   };
 
   return (
@@ -24,7 +20,6 @@ const Composition = ({ composition }) => {
       <JsonLd data={jsonData} />
       <h2>{composition.name}</h2>
       <p>Composer: {composition.composer}</p>
-      <p>Lyricist: {composition.lyricist}</p>
       <p>ISWC: {composition.iswc}</p>
     </div>
   );

@@ -6,15 +6,16 @@ const Playlist = ({ playlist }) => {
       schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
-    "@type": "schema:MusicPlaylist",
-    "schema:name": playlist.name,
-    "schema:numTracks": playlist.numTracks,
-    "schema:track": playlist.tracks.map((track) => ({
-      "@type": "schema:MusicRecording",
-      "schema:name": track.title,
-      "schema:byArtist": {
-        "@type": "schema:MusicGroup",
-        "schema:name": track.artist,
+    "@type": "hiphop:Playlist",
+    "hiphop:name": playlist.name,
+    "hiphop:date_published": playlist.datePublished,
+    "hiphop:num_tracks": playlist.numTracks,
+    "hiphop:main_entity": playlist.tracks.map((track) => ({
+      "@type": "hiphop:Track",
+      "hiphop:name": track.name,
+      "hiphop:artist": {
+        "@type": "hiphop:Artist",
+        "hiphop:name": track.artist,
       },
     })),
   };
@@ -23,16 +24,15 @@ const Playlist = ({ playlist }) => {
     <div className="Playlist">
       <JsonLd data={jsonData} />
       <h2>{playlist.name}</h2>
+      <p>Date Published: {playlist.datePublished}</p>
       <p>Number of Tracks: {playlist.numTracks}</p>
-      <div>
+      <ul>
         {playlist.tracks.map((track, index) => (
-          <div key={index}>
-            <p>
-              {track.title} by {track.artist}
-            </p>
-          </div>
+          <li key={index}>
+            {track.name} by {track.artist}
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

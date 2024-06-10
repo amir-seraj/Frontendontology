@@ -6,14 +6,14 @@ const MusicTrack = ({ track }) => {
       schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
-    "@type": "schema:MusicRecording",
-    "schema:name": track.title,
-    "schema:duration": track.duration,
-    "schema:byArtist": {
-      "@type": "schema:MusicGroup",
-      "schema:name": track.artist,
+    "@type": "hiphop:Track",
+    "hiphop:name": track.title,
+    "hiphop:duration": track.duration,
+    "hiphop:artist": {
+      "@type": "hiphop:Artist",
+      "hiphop:name": track.artist,
     },
-    "schema:isrcCode": track.isrc,
+    "hiphop:ISRC": track.isrc,
   };
 
   return (
@@ -26,5 +26,4 @@ const MusicTrack = ({ track }) => {
     </div>
   );
 };
-
 export default MusicTrack;

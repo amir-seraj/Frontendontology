@@ -6,23 +6,18 @@ const Organization = ({ organization }) => {
       schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
-    "@type": "schema:Organization",
-    "schema:name": organization.name,
-    "schema:address": organization.address,
-    "schema:founder": {
-      "@type": "schema:Person",
-      "schema:name": organization.founder,
-    },
-    "schema:foundingDate": organization.foundingDate,
+    "@type": "hiphop:Organization",
+    "hiphop:name": organization.name,
+    "hiphop:founding_date": organization.foundingDate,
+    "hiphop:number_of_employees": organization.numberOfEmployees,
   };
 
   return (
     <div className="Organization">
       <JsonLd data={jsonData} />
       <h2>{organization.name}</h2>
-      <p>Founder: {organization.founder}</p>
       <p>Founding Date: {organization.foundingDate}</p>
-      <p>Address: {organization.address}</p>
+      <p>Number of Employees: {organization.numberOfEmployees}</p>
     </div>
   );
 };

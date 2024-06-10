@@ -6,14 +6,14 @@ const Album = ({ album }) => {
       schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
-    "@type": "schema:MusicAlbum",
-    "schema:name": album.name,
-    "schema:byArtist": {
-      "@type": "schema:MusicGroup",
-      "schema:name": album.artist,
+    "@type": "hiphop:Album",
+    "hiphop:name": album.name,
+    "hiphop:artist": {
+      "@type": "hiphop:Artist",
+      "hiphop:name": album.artist,
     },
-    "schema:datePublished": album.releaseDate,
-    "schema:numTracks": album.numTracks,
+    "hiphop:date_published": album.releaseDate,
+    "hiphop:num_tracks": album.numTracks,
   };
 
   return (
@@ -26,5 +26,4 @@ const Album = ({ album }) => {
     </div>
   );
 };
-
 export default Album;

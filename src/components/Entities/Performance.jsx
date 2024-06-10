@@ -6,16 +6,16 @@ const Performance = ({ performance }) => {
       schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
-    "@type": "schema:Event",
-    "schema:name": performance.name,
-    "schema:startDate": performance.date,
-    "schema:location": {
-      "@type": "schema:Place",
-      "schema:name": performance.location,
+    "@type": "hiphop:Performance",
+    "hiphop:name": performance.name,
+    "hiphop:date": performance.date,
+    "hiphop:location": {
+      "@type": "hiphop:Place",
+      "hiphop:name": performance.location,
     },
-    "schema:performer": {
-      "@type": "schema:MusicGroup",
-      "schema:name": performance.artist,
+    "hiphop:performer": {
+      "@type": "hiphop:Artist",
+      "hiphop:name": performance.artist,
     },
   };
 

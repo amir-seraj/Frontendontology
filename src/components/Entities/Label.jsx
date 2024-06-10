@@ -6,18 +6,21 @@ const Label = ({ label }) => {
       schema: "http://schema.org/",
       hiphop: "https://amir-seraj.github.io/HipHopOntology/hiphop.jsonld#",
     },
-    "@type": "schema:Organization",
-    "schema:name": label.name,
-    "schema:url": label.homepage,
+    "@type": "hiphop:Label",
+    "hiphop:name": label.name,
+    "hiphop:founding_date": label.foundingDate,
+    "hiphop:affiliated_to": {
+      "@type": "hiphop:Organization",
+      "hiphop:name": label.affiliatedTo,
+    },
   };
 
   return (
     <div className="Label">
       <JsonLd data={jsonData} />
       <h2>{label.name}</h2>
-      <p>
-        Homepage: <a href={label.homepage}>{label.homepage}</a>
-      </p>
+      <p>Founding Date: {label.foundingDate}</p>
+      <p>Affiliated To: {label.affiliatedTo}</p>
     </div>
   );
 };
